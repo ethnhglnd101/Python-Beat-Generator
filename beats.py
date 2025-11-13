@@ -186,7 +186,14 @@ def snare():
     y1 = ''.join(random.choice(characters) for _ in range(length))
     y2 = ''.join(random.choice(characters) for _ in range(length))
     y3 = ''.join(random.choice(characters) for _ in range(length))
-    x = '|' + y +'|'+ y1 +'|'+ y2 +'|'+ y3
+    snare_patterns = [
+        '| .| .| .| .|',
+        '| .|.,| .| .|',
+        '| .| .|.,| .|',
+        '| .| .| .|.,|',
+
+    ]
+    x = random.choice(snare_patterns)
     for i, char in enumerate(x):
         offset = 480 if i < 0 else 0
         if char == '.':
